@@ -1,0 +1,122 @@
+<!-- Deontae Cocroft | 2024 May 4th -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing</title>
+    <link rel="stylesheet" href="billing_style.css">
+</head>
+<body>
+
+<!-- Button for Main Menu -->
+<button id="mainMenuButton">Main Menu</button>
+
+<!-- Title for window -->
+<h2>Billing</h2>
+
+<div class="container">
+    <!-- Fields to enter billing information -->
+    <form id="addBillForm">
+            <div>
+                <label for="appointmentId">*Appointment ID:</label>
+                <input type="number" id="appointmentId" name="appointmentId" required><br>
+            </div>
+
+            <div>
+                <label for="isPaid">Is Paid:</label>
+                <input type="text" id="isPaid" name="isPaid"><br>
+            </div>
+
+            <div>
+                <label for="notes">Notes:</label>
+                <input type="text" id="notes" name="notes"><br>
+            </div>
+
+            <input type="submit" value="Save Bill">
+            <button type="button" id="searchBillButton">Search</button>
+            <button type="button" id="clearFieldsButton">Clear Fields</button>
+            <button type="button" id="deleteBillButton">Delete Bill</button>
+            <button type="button" id="isPaidBillButton">Mark Bill</button>
+            <button type="button" id="generatePdfButton">Generate PDF</button>
+            <button type="button" id="helpButton">Help</button>
+    </form>
+</div>
+
+<div>
+    <!-- Prompt and setup for deleting bills -->
+    <div id = "deletePrompt" style="display: none;">
+            <h4>Delete Bill</h4>
+            <form id="deleteBillForm">
+                <label for="deleteBillId">Enter Bill ID:</label>
+                <input type="number" id="deleteBillId" name="deleteBillId" required>
+                <button type ="submit">Delete</button>
+                <button type="button" id="cancelDeleteButton">Cancel</button>
+                <button type="button" id="clearDeleteButton">Clear Field</button>
+            </form>
+    </div>
+
+     <!-- Prompt and setup for searching bills -->
+    <div id = "searchPrompt" style="display: none;">
+        <h3>SEARCH MODE (Appointment ID)</h3>
+        <h4>Search Bill</h4>
+        <form id="searchBillForm">
+            <label for="searchBillId">Enter Bill ID:</label>
+            <input type="number" id="searchBillId" name="searchBillId">
+            <button type ="submit">Search</button>
+            <button type="button" id="cancelSearchButton">Cancel</button>
+            <button type="button" id="clearSearchButton">Clear Field</button>
+        </form>
+    </div>
+
+    <!-- Prompt and setup for marking bills as paid or not paid -->
+    <div id = "markPrompt" style="display: none;">
+        <h3>UPDATE MODE (Is Paid)</h3>
+        <h4>Mark Bill As Paid</h4>
+        <form id="markBillForm">
+            <label for="markBillId">Enter Bill ID</label>
+            <input type="number" id="markBillId" name="markBillId">
+            <button type ="submit">Mark</button>
+            <button type="button" id="cancelMarkButton">Cancel</button>
+            <button type="button" id="clearMarkButton">Clear Field</button>
+        </form>
+    </div>
+
+    <!-- Prompt and setup for creating bill pdf -->
+    <div id = "pdfPrompt" style="display: none;">
+        <h4>Bill to PDF</h4>
+        <form id="pdfBillForm">
+            <label for="pdfBillId">Enter Bill ID</label>
+            <input type="number" id="pdfBillId" name="pdfBillId">
+            <button type ="submit">Create PDF</button>
+            <button type="button" id="cancelPdfButton">Cancel</button>
+            <button type="button" id="clearPdfButton">Clear Field</button>
+        </form>
+    </div>
+
+    <!-- Table to display billing information -->
+    <div class="table">
+        <table id="billingTable">
+            <thead>
+                <tr>
+                    <th>Bill ID</th>
+                    <th>Appointment ID</th>
+                    <th>Notes</th>
+                    <th>Is Paid</th>
+                    <th>Procedure Occurrences</th>
+                    <th>Procedure ID</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        <table>
+    </div>
+</div>
+
+
+<!-- Set JS -->
+<script src="billing_script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!-- Deontae Cocroft | 2024 May 4th -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription</title>
+    <!--Linking CSS for Styling-->
+    <link rel="stylesheet" href="prescription_style.css">
+</head>
+<body>
+
+<!--Button for Main Menu-->
+<button id="mainMenuButton">Main Menu</button>
+
+<!--Title for window-->
+<h2>Prescription</h2>
+
+<div class="container">
+    <!--Fields to enter prescription billing information-->
+    <form id="addPreBillForm">
+
+        <div>
+            <label for="patientId">*Patient ID:</label>
+            <input type="number" id="patientId" name="patientId" required><br>
+        </div>
+
+        <div>
+            <label for="prescriptionId">*Prescription ID:</label>
+            <input type="number" id="prescriptionId" name="prescriptionId"required><br>
+        </div>
+
+        <div>
+            <label for="quantity">*Quantity:</label>
+            <input type="number" id="quantity" name="quantity"required><br>
+        </div>
+
+            <input type="submit" value="Save Prescription Bill">
+            <button type="button" id="searchPreBillButton">Search Prescription Bill</button>
+            <button type="button" id="clearFieldsButton">Clear Fields</button>
+            <button type="button" id="deletePreBillButton">Delete Prescription Bill</button>
+            <button type="button" id="generatePrePdfButton">Generate PDF</button>
+            <button type="button" id="helpPreButton">Help</button>
+            <button type="button" id="patientPreButton">Patients</button>
+
+    </form>
+</div>
+
+    <!--Prompt and setup for deleting prescription bills-->
+    <div id = "deletePrePrompt" style="display: none;">
+        <h4>Delete Prescription Bill</h4>
+        <form id="deletePreBillForm">
+            <label for="deletePreBillId">Enter Prescription Bill Info ID:</label>
+            <input type="number" id="deletePreBillId" name="deletePreBillId" required>
+            <button type ="submit">Delete</button>
+            <button type="button" id="cancelPreDeleteButton">Cancel</button>
+            <button type="button" id="clearPreDeleteButton">Clear Field</button>
+        </form>
+    </div>
+
+    <!--Prompt and setup for searching prescription bills-->
+    <div id = "searchPrePrompt" style="display: none;">
+        <h3>SEARCH MODE (Patient ID)</h3>
+        <h4>Search Prescription Bill</h4>
+        <form id="searchPreBillForm">
+            <label for="searchPreBillId">Enter Prescription Bill ID:</label>
+            <input type="number" id="searchPreBillId" name="searchPreBillId">
+            <button type ="submit">Search</button>
+            <button type="button" id="cancelPreSearchButton">Cancel</button>
+            <button type="button" id="clearPreSearchButton">Clear Field</button>
+        </form>
+    </div>
+
+    <!--Prompt and setup for marking prescription bills as paid or not paid-->
+    <div id = "pdfPrePrompt" style="display: none;">
+        <h4>Prescription Bill to PDF</h4>
+        <form id="pdfPreBillForm">
+            <label for="pdfPreBillId">Enter Prescription Bill ID</label>
+            <input type="number" id="pdfPreBillId" name="pdfPreBillId">
+            <button type ="submit">Create PDF</button>
+            <button type="button" id="cancelPrePdfButton">Cancel</button>
+            <button type="button" id="clearPrePdfButton">Clear Field</button>
+        </form>
+    </div>
+
+    <div class="tables">
+        <!--Table to display prescription billing information-->
+            <table id="prescriptionBillTable">
+                <thead>
+                    <tr>
+                        <th>Prescription Bill Info ID</th>
+                        <th>Patient ID</th>
+                        <th>Prescription ID</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            <table>
+
+            <!--Table to display prescription information-->
+            <table id="prescriptionTable">
+                <thead>
+                    <tr>
+                        <th>Prescription ID</th>
+                        <th>Name</th>
+                        <th>Notes</th>
+                        <th>Price</th>
+                        <th>Items In Stock</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            <table>
+    </div>
+
+<!--Set JS-->
+<script src="prescription_script.js"></script>
+
+</body>
+</html>
+
+
+        

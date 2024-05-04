@@ -1,0 +1,147 @@
+/* Deontae Cocroft | 2024 May 4th */
+/* General window styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #64799180;
+    margin: 0;
+}
+
+/* Main title */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Styling of inputs and buttons */
+.formInputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-right: 5px;
+}
+
+/* Setup for form buttons */
+.formButtons{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: block;
+  
+}
+
+/* Styling for table */
+.patientTable {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    border-collapse: collapse;
+    display: block;
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+/* Set table headers to prevent moving when scrolling */
+.patientTable th{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Styling for table rows and headers */
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Adjusting size of table columns */
+#patientsTable td:nth-child(13) {
+    width: 200px; 
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#patientsTable td:nth-child(14) {
+    width: 70px; 
+    max-width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* Styling for main menu button */
+#mainMenuButton {
+    position: fixed;
+    background-color: #007bff;
+    color: white;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 5px;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    margin-top: 10px;  
+}
+
+/* Adjusting size of fields for data entry */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 400px;
+    padding: 2px;
+    margin: 2px 0;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+input[type="submit"],
+button[type="button"],
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover,
+button[type="button"]:hover,
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"]:focus,
+button[type="button"]:focus,
+button[type="submit"]:focus {
+    outline: none;
+}
+
+/* Error Message Styling */
+.error {
+    color: red;
+    margin-top: 5px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}

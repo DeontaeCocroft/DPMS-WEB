@@ -1,0 +1,162 @@
+/* Deontae Cocroft | 2024 May 4th */
+/* General window styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #64799180;
+    margin: 0;
+}
+
+/* Main title */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Styling of inputs and buttons */
+.formInputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* Setup for form buttons */
+.formButtons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: block;
+  
+}
+
+/* Specific for appointment and procedure */
+.tablesContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.appointmentTables {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-right: 1%;
+    margin-top: 30px;
+}
+
+.dentalSpecialistTables {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-top: 30px;
+}
+
+#appointmentTable {
+    float: left;
+    display: block;
+    max-height: 400px;
+    min-width: 1250px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    border-collapse: collapse;
+}
+
+#procedureTable {
+    float: left;
+    display: block;
+    max-height: 300px;
+    min-width: 1200px;
+    overflow-y: auto;
+    border-collapse: collapse;
+}
+
+#dentistTable,
+#dentalHygienistTable,
+#dentalAssistantTable,
+#dentalSurgeonTable {
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    max-width: 500px;
+    max-height: 150px;
+}
+
+table th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Styling for table */
+table {
+    display: block;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Styling for main menu button */
+#mainMenuButton {
+    position: fixed;
+    background-color: #007bff;
+    color: white;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 5px;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Button styling */
+input[type="submit"],
+button[type="button"],
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover,
+button[type="button"]:hover,
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"]:focus,
+button[type="button"]:focus,
+button[type="submit"]:focus {
+    outline: none;
+}
+
+/* Error Message Styling */
+.error {
+    color: red;
+    margin-top: 5px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}

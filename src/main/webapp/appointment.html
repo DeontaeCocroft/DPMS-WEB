@@ -1,0 +1,221 @@
+<!-- Deontae Cocroft | 2024 May 4th -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+
+    <!--Linking CSS for Styling-->
+    <link rel="stylesheet" href="appointment_style.css">
+</head>
+<body>
+
+<!--Button for Main Menu-->
+<button id="mainMenuButton">Main Menu</button>
+
+<!--Title for window-->
+<h2>Appointments</h2>
+
+<div class="container">
+    <!--Fields to enter patient information-->
+    <form id="addAppointmentForm">
+        <div class="formInputs">
+            <div>
+                <label for="patientId">*Patient ID:</label>
+                <input type="number" id="patientId" name="patientId" required><br>
+            </div>
+            
+            <div>
+                <label for="procedureId">*Procedure ID:</label>
+                <input type="number" id="procedureId" name="procedureId" required><br>
+            </div>
+            
+            <div>
+                <label for="procedureOccurrences">*Procedure Occurrences:</label>
+                <input type="number" id="procedureOccurrences" name="procedureOccurrences" required><br>
+            </div>
+            
+            <div>
+                <label for="dentistId">*Dentist ID:</label>
+                <input type="number" id="dentistId" name="dentistId" required><br>
+            </div>
+            
+            <div>
+                <label for="dentalHygienistId">*Dental Hygienist ID:</label>
+                <input type="number" id="dentalHygienistId" name="dentalHygienistId" required><br>
+            </div>
+            
+            <div>
+                <label for="dentalAssistantId">Dental Assistant ID:</label>
+                <input type="number" id="dentalAssistantId" name="dentalAssistantId"><br>
+            </div>
+            
+            <div>
+                <label for="dentalSurgeonId">Dental Surgeon ID:</label>
+                <input type="number" id="dentalSurgeonId" name="dentalSurgeonId"><br>
+            </div>
+            
+            <div>
+                <label for="appointmentDate">*Appointment Date:</label>
+                <input type="date" id="appointmentDate" name="appointmentDate" required><br>
+            </div>
+            
+            <div>
+                <label for="appointmentTime">*Appointment Time:</label>
+                <input type="time" id="appointmentTime" name="appointmentTime" required><br>
+            </div>
+            
+            <div>
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes"></textarea><br>
+            </div>
+            
+            <div>
+                <label for="canceled">Canceled:</label>
+                <input type="text" id="canceled" name="canceled"><br>
+            </div>
+        </div>
+
+        <div class="formButtons">
+            <input type="submit" value="Save Appointment">
+            <button type="button" id="searchAppointmentButton">Search</button>
+            <button type="button" id="clearFieldsButton">Clear Fields</button>
+            <button type="button" id="deleteAppointmentButton">Delete Appointment</button>
+            <button type="button" id="cancelButton">Cancel Appointment</button>
+            <button type="button" id="patientButton">Patients</button>
+            <button type="button" id="helpButton">Help</button>
+        </div>
+
+    </form>
+</div>
+
+<div>
+    <!-- Prompt and setup for deleting appointments -->
+    <div id="deleteAppointmentPrompt" style="display: none;">
+        <h4>Delete Appointment</h4>
+        <form id="deleteAppointmentForm">
+            <label for="deleteAppointmentId">Enter Appointment ID:</label>
+            <input type="number" id="deleteAppointmentId" name="deleteAppointmentId" required>
+                <button type="submit">Delete</button>
+                <button type="button" id="cancelDeleteButton">Cancel</button>
+                <button type="button" id="clearDeleteButton">Clear Field</button>
+        </form>
+    </div>
+
+    <!-- Prompt and setup for deleting appointments -->
+    <div id="searchAppointmentPrompt" style="display: none;">
+        <h4>Search Appointment</h4>
+        <form id="searchAppointmentForm">
+            <label for="searchAppointmentId">Enter Appointment ID:</label>
+            <input type="number" id="searchAppointmentId" name="searchAppointmentId">
+                <button type="submit">Search</button>
+                <button type="button" id="cancelSearchButton">Cancel</button>
+                <button type="button" id="clearSearchButton">Clear Field</button>
+        </form>
+    </div>
+
+    <!-- Prompt and setup for marking appointments as canceled or not canceled -->
+    <div id = "cancelAppointmentPrompt" style="display: none;">
+        <h3>UPDATE MODE (Canceled)</h3>
+        <h4>Mark appointment as canceled</h4>
+        <form id="cancelAppointmentForm">
+            <label for="cancelAppointmentId">Enter Appointment ID</label>
+            <input type="number" id="cancelAppointmentId" name="cancelAppointmentId">
+            <button type ="submit">Mark</button>
+            <button type="button" id="cancelCancelAppointmentButton">Cancel</button>
+            <button type="button" id="clearCancelAppointmentButton">Clear Field</button>
+        </form>
+    </div>
+
+    <div class="tablesContainer">
+        <!-- Container for appointment-related tables -->
+        <div class="appointmentTables">
+            <table id="appointmentTable">
+                <thead>
+                    <tr>
+                        <th>Appointment ID</th>
+                        <th>Patient ID</th>
+                        <th>Procedure ID</th>
+                        <th>Procedure Occurrences</th>
+                        <th>Dentist ID</th>
+                        <th>Dental Hygienist ID</th>
+                        <th>Dental Assistant ID</th>
+                        <th>Dental Surgeon ID</th>
+                        <th>Appointment Date</th>
+                        <th>Appointment Time</th>
+                        <th>Notes</th>
+                        <th>Canceled</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+    
+            <table id="procedureTable">
+                <thead>
+                    <tr>
+                        <th>Procedure ID</th>
+                        <th>Name</th>
+                        <th>Notes</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    
+        <!-- Container for dental specialist tables -->
+        <div class="dentalSpecialistTables">
+            <table id="dentistTable">
+                <thead>
+                    <tr>
+                        <th>Dentist ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <table id="dentalHygienistTable">
+                <thead>
+                    <tr>
+                        <th>Dental Hygienist ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <table id="dentalAssistantTable">
+                <thead>
+                    <tr>
+                        <th>Dental Assistant ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <table id="dentalSurgeonTable">
+                <thead>
+                    <tr>
+                        <th>Dental Surgeon ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--Set JS-->
+<script src="appointment_script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* Deontae Cocroft | 2024 May 4th */
+/* General window styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #64799180;
+    display: flex;
+    justify-content: center;
+    margin: 150px;
+}
+
+/* Styling for menu container*/
+.main-menu {
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Style for menu items*/
+.menu-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.menu-items img {
+    width: 130px;
+    height: 130px;
+}
+
+/* Styling for buttons */
+button {
+    display: block;
+    width: 130px;
+    padding: 12px 20px;
+    margin: 10px auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+a:hover {
+    color: #0056b3;
+}
+

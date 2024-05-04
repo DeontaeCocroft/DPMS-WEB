@@ -1,0 +1,80 @@
+/* Deontae Cocroft | 2024 May 4th */
+/* General Window Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #64799180;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px;
+}
+
+/* Layout and styling for login container */
+.login {
+    width: 350px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Login title Text */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Spacing for label and input groups in login form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Styling for field titles */
+label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+}
+
+/* Style for buttons */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style for error message */
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    display: none;
+}

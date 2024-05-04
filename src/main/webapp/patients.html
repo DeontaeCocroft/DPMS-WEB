@@ -1,0 +1,162 @@
+<!-- Deontae Cocroft | 2024 May 4th -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients</title>
+    <!--Linking CSS for Styling-->
+    <link rel="stylesheet" href="patients_style.css">
+</head>
+<body>
+
+
+<!--Button for Main Menu-->
+<button id="mainMenuButton">Main Menu</button>
+
+<!--Title for window-->
+<h2>Patients</h2>
+
+<div class="container">
+    <!--Fields to enter patient information-->
+    <form id="addPatientForm">
+        <div class="formInputs">
+            <div>
+                <label for="firstName">*First Name:</label>
+                <input type="text" id="firstName" name="firstName" required><br>
+            </div>
+
+            <div>
+                <label for="lastName">*Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required><br>
+            </div>
+
+            <div>
+                <label for="dateOfBirth">*Date of Birth:</label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth" required><br>
+            </div>
+
+            <div>
+                <label for="gender">*Gender:</label>
+                <input type="text" id="gender" name="gender" required><br>
+            </div>
+
+            <div>
+                <label for="address">*Address:</label>
+                <input type="text" id="address" name="address" required><br>
+            </div>
+
+            <div>
+                <label for="city">*City:</label>
+                <input type="text" id="city" name="city" required><br>
+            </div>
+
+            <div>
+                <label for="state">*State:</label>
+                <input type="text" id="state" name="state" required><br>
+            </div>
+
+            <div>
+                <label for="zipCode">*Zip Code:</label>
+                <input type="number" id="zipCode" name="zipCode" required><br>
+            </div>
+
+            <div>
+                <label for="insuranceCompany">Insurance Company:</label>
+                <input type="text" id="insuranceCompany" name="insuranceCompany"><br>
+            </div>
+
+            <div>
+                <label for="insuranceNumber">Insurance Number:</label>
+                <input type="number" id="insuranceNumber" name="insuranceNumber"><br>
+            </div>
+
+            <div>
+                <label for="phoneNumber">*Phone Number:</label>
+                <input type="number" id="phoneNumber" name="phoneNumber" required><br>
+            </div>
+
+            <div>
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes"></textarea><br>
+            </div>
+
+            <div>
+                <label for="xrayImages">X-ray Images Link:</label>
+                <input type="text" id="xrayImages" name="xrayImages"><br>
+            </div>
+        </div>
+
+        <div class="formButtons">
+            <input type="submit" value="Save Patient">
+            <button type="button" id="updatePatientButton">Update</button>
+            <button type="button" id="searchPatientButton">Search</button>
+            <button type="button" id="clearFieldsButton">Clear Fields</button>
+            <button type="button" id="deletePatientButton">Delete Patient</button>
+            <button type="button" id="helpButton">Help</button>
+        </div>
+
+    </form>
+
+</div>
+
+<div>
+
+    <!--Prompt and setup for deleting patients-->
+    <div class="deleteForm" id="deletePrompt" style="display: none;">
+        <h4>Delete Patient</h4>
+        <form id="deletePatientForm">
+            <label for="deletePatientId">Enter Patient ID:</label>
+            <input type="number" id="deletePatientId" name="deletePatientId" required>
+                <button type="submit">Delete</button>
+                <button type="button" id="cancelDeleteButton">Cancel</button>
+                <button type="button" id="clearDeleteButton">Clear Field</button>
+        </form>
+    </div>
+
+    <!--Prompt and setup for Updating patients-->
+    <div class = "updateForm" id="updatePrompt" style="display: none;">
+        <h3>UPDATE MODE (All Fields)</h3>
+        <h4>Update Patient</h4>
+        <form id="updatePatientForm">
+            <label for="updatePatientId">Enter Patient ID:</label>
+            <input type="number" id="updatePatientId" name="updatePatientId" required>
+                <button type="submit">Update Data</button>
+                <button type="button" id="cancelUpdateButton">Cancel</button>
+                <button type="button" id="clearUpdateButton">Clear Field</button>
+        </form>
+    </div>
+
+ 
+    <!--Table to display patient information-->
+
+    <div>
+        <table class= "patientTable" id="patientsTable">
+            <thead>
+                <tr>
+                    <th>Patient ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Date of Birth</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip Code</th>
+                    <th>Insurance Company</th>
+                    <th>Insurance Number</th>
+                    <th>Phone Number</th>
+                    <th>Notes</th>
+                    <th>X-ray Images Link</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+<!--Set JS-->
+<script src="patients_script.js"></script>
+
+</body>
+</html>

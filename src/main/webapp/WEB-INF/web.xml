@@ -1,0 +1,253 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+    <welcome-file-list>
+      <welcome-file>/login.html</welcome-file>
+    </welcome-file-list>
+
+    <!-- Login Servlets-->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.servlet.Login.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!-- Patient Servlets-->
+    <servlet>
+        <servlet-name>PatientServlet</servlet-name>
+        <servlet-class>com.servlet.Patient.PatientServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PatientServlet</servlet-name>
+        <url-pattern>/patients</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PatientServlet</servlet-name>
+        <url-pattern>/addPatient</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PatientServlet</servlet-name>
+        <url-pattern>/deletePatient</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PatientServlet</servlet-name>
+        <url-pattern>/searchPatients</url-pattern>
+    </servlet-mapping>
+
+    <!-- Update Patient Servlet -->
+    <servlet>
+        <servlet-name>UpdatePatientServlet</servlet-name>
+        <servlet-class>com.servlet.Patient.UpdatePatientServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdatePatientServlet</servlet-name>
+        <url-pattern>/updatePatient</url-pattern>
+    </servlet-mapping>
+
+    <!-- Billing Servlets-->
+
+    <servlet>
+        <servlet-name>BillingServlet</servlet-name>
+        <servlet-class>com.servlet.Billing.BillingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BillingServlet</servlet-name>
+        <url-pattern>/billing</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>BillingServlet</servlet-name>
+        <url-pattern>/searchBill</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>BillingServlet</servlet-name>
+        <url-pattern>/addBill</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>BillingServlet</servlet-name>
+        <url-pattern>/deleteBill</url-pattern>
+    </servlet-mapping>
+
+    <!-- Update Billing Servlet -->
+    <servlet>
+        <servlet-name>UpdateBillingServlet</servlet-name>
+        <servlet-class>com.servlet.Billing.UpdateBillingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateBillingServlet</servlet-name>
+        <url-pattern>/markBill</url-pattern>
+    </servlet-mapping>
+
+    <!-- Pdf Billing Servlet -->
+
+    <servlet>
+        <servlet-name>PdfBillingServlet</servlet-name>
+        <servlet-class>com.servlet.Billing.PdfBillingServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>PdfBillingServlet</servlet-name>
+        <url-pattern>/pdfBill</url-pattern>
+    </servlet-mapping>
+
+    <!-- Prescription Billing Servlets-->
+    <servlet>
+        <servlet-name>PrescriptionBillingServlet</servlet-name>
+        <servlet-class>com.servlet.Prescription.PrescriptionBillingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PrescriptionBillingServlet</servlet-name>
+        <url-pattern>/prescriptionBilling</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PrescriptionBillingServlet</servlet-name>
+        <url-pattern>/searchPreBill</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PrescriptionBillingServlet</servlet-name>
+        <url-pattern>/addPreBill</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PrescriptionBillingServlet</servlet-name>
+        <url-pattern>/deletePreBill</url-pattern>
+    </servlet-mapping>
+
+<!-- Prescription Servlet -->
+    <servlet>
+        <servlet-name>PrescriptionServlet</servlet-name>
+        <servlet-class>com.servlet.Prescription.PrescriptionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PrescriptionServlet</servlet-name>
+        <url-pattern>/prescription</url-pattern>
+    </servlet-mapping>
+
+<!-- Pdf Prescription Servlet -->
+    <servlet>
+        <servlet-name>PdfPrescriptionBillingServlet</servlet-name>
+        <servlet-class>com.servlet.Prescription.PdfPrescriptionBillingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PdfPrescriptionBillingServlet</servlet-name>
+        <url-pattern>/pdfPreBill</url-pattern>
+    </servlet-mapping>
+
+<!-- Appointment Sevrlets-->
+    <servlet>
+        <servlet-name>AppointmentServlet</servlet-name>
+        <servlet-class>com.servlet.Appointment.AppointmentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AppointmentServlet</servlet-name>
+        <url-pattern>/appointment</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AppointmentServlet</servlet-name>
+        <url-pattern>/addAppointment</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AppointmentServlet</servlet-name>
+        <url-pattern>/deleteAppointment</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AppointmentServlet</servlet-name>
+        <url-pattern>/searchAppointment</url-pattern>
+    </servlet-mapping>
+
+<!-- Dental Assistant Servlet for Appointments -->
+    <servlet>
+        <servlet-name>DentalAssistantServlet</servlet-name>
+        <servlet-class>com.servlet.Appointment.DentalAssistantServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DentalAssistantServlet</servlet-name>
+        <url-pattern>/dentalAssistant</url-pattern>
+    </servlet-mapping>
+
+<!-- Dental Hygienist Servlet for Appointments -->
+    <servlet>
+        <servlet-name>DentalHygienistServlet</servlet-name>
+        <servlet-class>com.servlet.Appointment.DentalHygienistServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DentalHygienistServlet</servlet-name>
+        <url-pattern>/dentalHygienist</url-pattern>
+    </servlet-mapping>
+
+<!-- Dental Surgeon Servlet for Appointments -->
+    <servlet>
+        <servlet-name>DentalSurgeonServlet</servlet-name>
+        <servlet-class>com.servlet.Appointment.DentalSurgeonServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DentalSurgeonServlet</servlet-name>
+        <url-pattern>/dentalSurgeon</url-pattern>
+    </servlet-mapping>
+
+<!-- Dentist Servlet for Appointments -->
+
+    <servlet>
+        <servlet-name>DentistServlet</servlet-name>
+        <servlet-class>com.servlet.Appointment.DentistServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DentistServlet</servlet-name>
+        <url-pattern>/dentist</url-pattern>
+    </servlet-mapping>
+
+<!-- Procedure Servlet for Appointments -->
+    <servlet>
+        <servlet-name>ProcedureServlet</servlet-name>
+        <servlet-class>com.servlet.Appointment.ProcedureServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProcedureServlet</servlet-name>
+        <url-pattern>/procedure</url-pattern>
+    </servlet-mapping>
+
+<!-- Update Servlet for canceling Appointments-->
+    <servlet>
+        <servlet-name>UpdateAppointmentServlet</servlet-name>
+        <servlet-class>com.servlet.Appointment.UpdateAppointmentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateAppointmentServlet</servlet-name>
+        <url-pattern>/cancelAppointment</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>
