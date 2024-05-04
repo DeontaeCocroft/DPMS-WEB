@@ -3,6 +3,9 @@
 This is my Web Dental Practice Management System I created using HTML, CSS, JavaScript, Java, Maven, API's, and PostgresSQL. This program allows users to save, delete, and view dental practice information such as patient, appointment, billing, and prescription information. This program is convenient to use and eliminates paperwork or the need to use Excel spreadsheets to store a lot of data.
 
 # Demo
+<img width="1921" alt="image" src="https://github.com/DeontaeCocroft/DPMS-WEB/assets/119895365/e3aa235b-759a-4de7-af40-9e41a8044a65">
+
+
 
 
 # Implementation
